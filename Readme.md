@@ -34,17 +34,6 @@ The system is designed with clarity, correctness, and extensibility in mind, fol
 
 ---
 
-## Architecture
-
-src/
-├── index.ts # Application entry point
-├── routes/ # HTTP route definitions
-├── controllers/ # Request lifecycle handling
-├── services/ # Business and domain logic
-├── config/ # Environment and app configuration
-
-
-
 Design principles:
 
 - Routes are thin and declarative
