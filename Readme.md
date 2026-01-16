@@ -43,8 +43,7 @@ src/
 ├── services/ # Business and domain logic
 ├── config/ # Environment and app configuration
 
-yaml
-Copy code
+
 
 Design principles:
 
