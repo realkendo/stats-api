@@ -1,12 +1,12 @@
-import express, { Request, Response, Application } from 'express';
+import app from "./app";
 
-const app:Application = express();
-const port = process.env.PORT || 3000;
 
-app.get("/", (req:Request, res:Response) => {
-  res.send("Hello world");
-});
+// assigning port - with cated type
+const port = Number(process.env.PORT) || 3000;
 
+
+// starting server
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
 });
+
