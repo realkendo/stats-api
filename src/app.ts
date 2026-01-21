@@ -1,5 +1,5 @@
 import express, {Application} from "express";
-import routes from "./routes";
+import routes from "./routes/index.routes";
 import logger from "./middleware/logger";
 
 const app:Application = express();
