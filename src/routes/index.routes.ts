@@ -1,13 +1,20 @@
-import {Router, Request, Response } from "express";
+import {Router} from "express";
+import matchRoutes from "../routes/match.routes";
+import healthRoutes from "../routes/health.routes";
+
 
 const router = Router();
 
-router.get("/", (req: Request, res: Response)=>{
-  res.send(`Helllo world ${Date.now()}`);
-});
+router.use("/", healthRoutes);
+router.use("/api", matchRoutes);
 
-router.get("/user", (req: Request, res: Response)=>{
-  res.send(`Welcome to the user route ${Date.now()}`);
-});
+
+// global 404 route handler
+router.use((_, res)=>{
+  res.status(404).json({
+    message: "Route unavailable",
+    timestamp: Date.now()
+  })
+})
 
 export default router;
